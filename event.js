@@ -39,6 +39,20 @@ function addLink() {
 
 }
 
+function colorButtons(){
+
+    //je cherche des inputs qui ont le type button
+    let buttons = document.querySelectorAll("input[type='button']");
+
+    for(let i=0; i < buttons.length; i++){
+        //classname enlève toutes les classes et remplace
+        buttons[i].className = "blue";
+    }
+
+    console.log(buttons)
+
+}
+
 const init = function () {
     document.getElementById("btn3").addEventListener("click", addLink);
 }
