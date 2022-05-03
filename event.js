@@ -41,6 +41,7 @@ function addLink() {
 
 function colorButtons(color){
 
+    console.log("Le contenu de color est " + color)
     //je cherche des inputs qui ont le type button
     let buttons = document.querySelectorAll("input[type='button']");
 
