@@ -16,6 +16,10 @@ function clicBtn2(){
 
 function addLink(){
 
+    let elem = document.getElementById("linkEni");
+
+    if(!elem){
+
     //création d'une balise a
     let link = document.createElement("a")
     //création de texte
@@ -24,11 +28,13 @@ function addLink(){
     //ajout d'attributs sur a
     link.setAttribute("href", "https://www.eni-ecole.fr/")
     link.setAttribute("target", "_blank")
+    link.setAttribute("id","linkEni")
 
     //ajout du texte dans a
-    link.appendChil(linkText)
+    link.appendChild(linkText)
 
     //ajout de a dans le DOM
     document.getElementById("btn3").insertAdjacentElement("beforebegin", link)
+    }
 
 }
