@@ -1,4 +1,4 @@
-function getInputValue(){
+function getInputValue() {
 
     //déclaration du comportement
     console.log("clic sur le bouton btn1");
@@ -10,31 +10,37 @@ function getInputValue(){
 
 }
 
-function clicBtn2(){
+function clicBtn2() {
     console.log("j'ai cliqué sur le btn 2 !")
 }
 
-function addLink(){
+function addLink() {
 
     let elem = document.getElementById("linkEni");
 
-    if(!elem){
+    if (!elem) {
 
-    //création d'une balise a
-    let link = document.createElement("a")
-    //création de texte
-    let linkText = document.createTextNode("ENI")
+        //création d'une balise a
+        let link = document.createElement("a")
+        //création de texte
+        let linkText = document.createTextNode("ENI")
 
-    //ajout d'attributs sur a
-    link.setAttribute("href", "https://www.eni-ecole.fr/")
-    link.setAttribute("target", "_blank")
-    link.setAttribute("id","linkEni")
+        //ajout d'attributs sur a
+        link.setAttribute("href", "https://www.eni-ecole.fr/")
+        link.setAttribute("target", "_blank")
+        link.setAttribute("id", "linkEni")
 
-    //ajout du texte dans a
-    link.appendChild(linkText)
+        //ajout du texte dans a
+        link.appendChild(linkText)
 
-    //ajout de a dans le DOM
-    document.getElementById("btn3").insertAdjacentElement("beforebegin", link)
+        //ajout de a dans le DOM
+        document.getElementById("btn3").insertAdjacentElement("beforebegin", link)
     }
 
 }
+
+const init = function () {
+    document.getElementById("btn3").addEventListener("click", addLink);
+}
+
+window.onload = init;
